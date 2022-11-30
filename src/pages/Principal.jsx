@@ -21,11 +21,6 @@ const Principal = () => {
 
   return (
     <div className="w-screen m-0">
-      <div className="h-20 w-screen text-end bg-gray-300 flex items-center justify-end mr-10">
-        <div className="h-20 flex items-center">
-          <Button text={"Favoritos"} />
-        </div>
-      </div>
       {pintar ? (
         pintar?.map((items) => (
           <div
@@ -51,7 +46,7 @@ const Principal = () => {
             alt="img"
           />
           <div className="text-lg gap-5 font-semibold">
-            <h1>Nose</h1>
+            <h1>name</h1>
             <h1>email</h1>
             <h1>date</h1>
             <h1>address</h1>
@@ -68,6 +63,23 @@ const Principal = () => {
         <div>
           <Button text={"Favoritos"} />
         </div>
+      </div>
+
+      <div className="w-1/2 h-80 bg-gray-200 mx-auto">
+        <div className="flex gap-5 justify-between px-10 font-bold">
+          <h1>Nombre</h1>
+          <h1>email</h1>
+          <h1>pais</h1>
+          <h1>phone</h1>
+        </div>
+        {pintar?.map((items) => (
+          <div className="flex gap-5 justify-between px-10 font-semibold">
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+          </div>
+        ))}
       </div>
     </div>
   );
