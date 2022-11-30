@@ -1,13 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Favoritos from "./pages/favoritos";
+import Principal from "./pages/Principal";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:<Principal />,
+    children: [
+      {
+        path: "/favoritos",
+        element: <Favoritos />
+      }
+    ]
+  },
+
+]);
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <div>
-      <h1>Hola mundo</h1>
+    <div className="App bg-[#EFF2F6] max-h-max h-screen overflow-y-scroll ">     
+        <RouterProvider router={router} />
+        
     </div>
   )
 }
